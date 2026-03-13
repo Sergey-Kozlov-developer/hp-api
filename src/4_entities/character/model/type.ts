@@ -1,7 +1,7 @@
 export interface ICharacter {
     id: string;
     name: string;
-    alternative_name: string[] | [];
+    alternative_names: string[];
     species: string;
     gender: string;
     house: string;
@@ -23,9 +23,7 @@ export interface ICharacter {
     image: string;
 }
 
-export interface ICharactersResponse {
-    results: ICharacter[];
-}
+export type ICharactersResponse = ICharacter[];
 
 export interface ICharacterParams {
     name?: string;
