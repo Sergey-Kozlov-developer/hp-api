@@ -12,9 +12,20 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        'scrolling0header': {
+          to: {
+            boxShadow: '0 0 1rem 0 green'
+          }
+        }
+      }
+    },
   },
 
   // The output directory for your css system
   outdir: "src/0_app/styles/styled-system",
+
+  // Required when using path aliases: so Panda recognizes "@styled/css" and extracts styles
+  importMap: "@styled",
 });
