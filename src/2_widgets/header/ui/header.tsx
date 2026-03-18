@@ -1,6 +1,7 @@
 import {css} from "@styled/css";
 import {Link} from "react-router";
 
+import logo from '@assets/images/logo.png'
 
 
 const headerStyles = css({
@@ -13,6 +14,27 @@ const headerStyles = css({
     background: 'background/95',
     backdropFilter: 'blur(8px)',
 });
+
+const navWrapper = css({
+    maxWidth: 'breakpoint-xl',
+    width: 'full',
+    margin: '0 auto',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+})
+
+const navigation = css({
+    display: 'flex',
+    flexDirection: {
+        base: 'column',
+        md: 'row'
+    },
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: '2rem',
+
+})
 
 export const Header = () => {
 
@@ -27,18 +49,16 @@ export const Header = () => {
 
     return (
         <header className={headerStyles}>
-            <div className={css({})}>
-                <div className={css({})}>
-                    <img src="" alt=""/>
-                </div>
-                <nav>
-                        <ul className={css({color: 'green'})}>
-                    {navs.map(nav => (
-                            <li>
+            <div className={navWrapper}>
+                    <img src={logo} alt="Harry Potter" className={css({width: '60px'})}/>
+                <nav className=''>
+                    <ul className={navigation}>
+                        {navs.map(nav => (
+                            <li key={nav.id}>
                                 <Link to={nav.path} className={css({color: 'red.500'})}>{nav.title}</Link>
                             </li>
-                    ))}
-                        </ul>
+                        ))}
+                    </ul>
                 </nav>
             </div>
         </header>
