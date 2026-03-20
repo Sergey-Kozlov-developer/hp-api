@@ -15,6 +15,7 @@ const headerStyles = css({
     borderColor: 'border',
     background: 'background/95',
     backdropFilter: 'blur(8px)',
+    fontFamily: 'harry-potter',
 });
 
 const navWrapper = css({
@@ -24,6 +25,7 @@ const navWrapper = css({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+    padding: '1rem 0',
 })
 
 const navigation = css({
@@ -88,7 +90,8 @@ const mobileNavList = css({
 });
 
 const liLink = css({
-    fontSize: '1.5rem',
+    fontSize: '2rem',
+    letterSpacing: '0.125rem',
     fontWeight: 'bold',
     transition: "0.3s ease-in-out",
     _hover: {

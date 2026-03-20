@@ -1,4 +1,5 @@
 import {useGetCharactersQuery} from "@entities/character";
+import {css} from "@styled/css";
 
 export const Home = () => {
 
@@ -6,7 +7,7 @@ export const Home = () => {
 
 
     return (
-        <div>
+        <div className={css({fontFamily: 'harry-potter', fontSize: '2rem', fontWeight: 'regular'})}>
             home
             {/*{data?.map(item => (*/}
             {/*    <div key={item.id}>*/}
